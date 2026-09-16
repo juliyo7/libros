@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+ <title>Libros</title>
+</head>
+<body>
+
+<h1>Listado de libros</h1>
+
+{% for libro in libros %}
+ <p>
+   <strong>{{ libro.titulo }}</strong><br>
+   Autor: {{ libro.autor }}<br>
+   Fecha: {{ libro.fecha_publicacion }}
+ </p>
+{% empty %}
+ <p>No hay libros registrados.</p>
+{% endfor %}
+
+</body>
+</html>
